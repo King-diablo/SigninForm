@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+    <form action="/main" method="post" class="form-signin">
+        <% if (hasAccess) { %>
+            <h1>Welcome <%= userName %>
+            </h1>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" name="value" value="logOut">Log Out</button>
+            <% }else { %>
+                <h1> Sorry Yo Do No Have Access To View this Page</h1>
+                <button type="submit" class="btn btn-lg btn-primary btn-block" name="value" value="goHome">Go
+                    Home</button>
+                <% } %>
+    </form>
+
+    <%- include("partials/footer") -%>
